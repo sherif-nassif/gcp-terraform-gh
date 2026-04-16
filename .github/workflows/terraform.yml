@@ -1,10 +1,9 @@
 name: Terraform Apply
 
-on:
+"on":
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   id-token: write
@@ -26,7 +25,5 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - run: terraform init
-
       - run: terraform plan -out=tfplan
-      
       - run: terraform apply -auto-approve tfplan
