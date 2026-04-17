@@ -37,4 +37,10 @@ resource "google_compute_instance" "lowest_spec_instance" {
     automatic_restart   = true
     on_host_maintenance = "MIGRATE"
   }
+
+  metadata = {
+    startup-script = file("user-data.sh")
+  }
+
+  tags = ["http-server"]
 }
