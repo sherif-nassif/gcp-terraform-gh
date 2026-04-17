@@ -1,12 +1,12 @@
 provider "google" {
   project = "project-d318db8d-3948-41a2-88d" 
-  region  = "europe-north1"
+  region  = "europe-north2"
 }
 
 resource "google_compute_instance" "lowest_spec_instance" {
   name         = "stockholm-micro-instance"
   machine_type = "e2-micro"      # The lowest spec available
-  zone         = "europe-north1-a"
+  zone         = "europe-north2-a"
 
   boot_disk {
     initialize_params {
