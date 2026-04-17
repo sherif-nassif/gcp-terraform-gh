@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "tfstate-project-d318db8d"# you need to create the bucket first
+    prefix = "terraform/state"
+  }
+}
+
 provider "google" {
   project = "project-d318db8d-3948-41a2-88d" 
   region  = "europe-north2"
