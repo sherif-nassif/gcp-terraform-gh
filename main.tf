@@ -10,7 +10,7 @@ resource "google_compute_instance" "lowest_spec_instance" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11" # Standard lightweight Linux image
+      image = "Ubuntu 22.04 LTS Minimal" # Standard lightweight Linux image
       size  = 10 # Minimum recommended size in GB
     }
   }
