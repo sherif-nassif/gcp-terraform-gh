@@ -10,7 +10,7 @@ resource "google_compute_instance" "lowest_spec_instance" {
 
   boot_disk {
     initialize_params {
-      image = "Ubuntu 22.04 LTS Minimal" # Standard lightweight Linux image
+      image = "ubuntu-minimal-2204-jammy-v20260416" # Standard lightweight Linux image
       size  = 10 # Minimum recommended size in GB
     }
   }
