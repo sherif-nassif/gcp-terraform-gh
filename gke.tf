@@ -25,6 +25,7 @@ resource "google_container_cluster" "my_vpc_native_cluster" {
 
   remove_default_node_pool = true
   initial_node_count       = 1
+  deletion_protection      = false
 
   network    = data.google_compute_network.default.id
   subnetwork = google_compute_subnetwork.gke.id
