@@ -26,5 +26,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - run: terraform init
+      - name: Import service account (one-time)
+        run: terraform import google_service_account.github_wif projects/project-d318db8d-3948-41a2-88d/serviceAccounts/github-wif@project-d318db8d-3948-41a2-88d.iam.gserviceaccount.com || true
       - run: terraform plan -out=tfplan
       - run: terraform apply -auto-approve tfplan
