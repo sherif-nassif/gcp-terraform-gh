@@ -46,7 +46,9 @@ resource "google_container_node_pool" "spot_pool" {
   }
 
   node_config {
-    machine_type = "e2-medium"
+    machine_type = "e2-small"
     spot         = true
+    disk_type    = "pd-standard"
+    disk_size_gb = 20
   }
 }
